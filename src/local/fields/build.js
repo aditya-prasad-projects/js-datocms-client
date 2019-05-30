@@ -44,9 +44,9 @@ const fieldTypeParser = {
     if (!value) { return value; }
     return new Color(value);
   },
-  seo(value) {
+  seo(value, { imgixHost }) {
     if (!value) { return value; }
-    return new Seo(value);
+    return new Seo(value, imgixHost);
   },
   json(value) {
     if (!value) { return value; }

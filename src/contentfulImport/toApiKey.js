@@ -4,7 +4,7 @@ import pluralize from 'pluralize';
 export const toItemApiKey = (value) => {
   return pluralize.singular(
     humps.decamelize(value),
-  );
+  ) + '_model';
 };
 
 export const toFieldApiKey = (value) => {
@@ -14,7 +14,7 @@ export const toFieldApiKey = (value) => {
     'children', 'status',
   ];
 
-  const apiKey = humps.decamelize(value);
+  const apiKey = humps.decamelize(value) + '_field';
 
   if (revervedKeys.indexOf(apiKey) < 0) {
     return apiKey;

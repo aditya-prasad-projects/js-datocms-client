@@ -42,10 +42,7 @@ export default async ({
             && e.body.data.some(d => d.id === 'FILE_STORAGE_QUOTA_EXCEEDED')
         ) {
           spinner.fail('You\'ve reached your site\'s plan storage limit: upgrade to complete the import');
-        } else {
-          spinner.fail(e);
         }
-        process.exit();
       }
     } else {
       spinner.text = progress.tick();

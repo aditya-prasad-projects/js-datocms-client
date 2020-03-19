@@ -1,6 +1,6 @@
 [
   {
-    "scope": "https://account-api.datocms.com:443",
+    "scope": "http://account-api.lvh.me:3001",
     "method": "GET",
     "path": "/docs/account-api-hyperschema.json",
     "body": "",
@@ -939,6 +939,12 @@
                                   "string"
                                 ]
                               },
+                              "cf_cod_fiscale": {
+                                "type": [
+                                  "null",
+                                  "string"
+                                ]
+                              },
                               "zip": {
                                 "type": "string"
                               }
@@ -1303,6 +1309,12 @@
                                   "string"
                                 ]
                               },
+                              "cf_cod_fiscale": {
+                                "type": [
+                                  "null",
+                                  "string"
+                                ]
+                              },
                               "zip": {
                                 "type": "string"
                               }
@@ -1416,6 +1428,12 @@
                                 "type": "string"
                               },
                               "vat_number": {
+                                "type": [
+                                  "null",
+                                  "string"
+                                ]
+                              },
+                              "cf_cod_fiscale": {
                                 "type": [
                                   "null",
                                   "string"
@@ -1653,6 +1671,9 @@
                     },
                     "access_tokens": {
                       "type": "integer"
+                    },
+                    "mux_encoding_seconds": {
+                      "type": "integer"
                     }
                   },
                   "example": {
@@ -1661,7 +1682,8 @@
                     "item_types": 0,
                     "roles": 0,
                     "deployment_environments": 0,
-                    "access_tokens": 0
+                    "access_tokens": 0,
+                    "mux_encoding_seconds": 0
                   }
                 }
               }
@@ -1881,6 +1903,22 @@
                   "description": "The number of requests made to both our Content Management and Content Delivery APIs",
                   "example": 100000
                 },
+                "mux_streaming_seconds": {
+                  "type": [
+                    "null",
+                    "integer"
+                  ],
+                  "description": "The number of streaming seconds delivered by Mux.com",
+                  "example": 3600
+                },
+                "mux_encoding_seconds": {
+                  "type": [
+                    "null",
+                    "integer"
+                  ],
+                  "description": "The number of available encoding seconds to Mux.com",
+                  "example": 3600
+                },
                 "access_tokens": {
                   "type": [
                     "null",
@@ -1918,14 +1956,19 @@
                   "description": "Whether collaboration features are enabled or not",
                   "example": true
                 },
-                "advanced_media_area": {
-                  "type": "boolean",
-                  "description": "Whether built-in image editor is enabled or not",
-                  "example": true
-                },
                 "sso": {
                   "type": "boolean",
                   "description": "Whether Single Sign-On feature is enabled or not",
+                  "example": true
+                },
+                "advanced_media_area": {
+                  "type": "boolean",
+                  "description": "Whether built-in image editor and smart-tagging is enabled or not",
+                  "example": true
+                },
+                "video": {
+                  "type": "boolean",
+                  "description": "Whether video streaming with Mux.com is enabled or not",
                   "example": true
                 },
                 "history_retention_months": {
@@ -2046,6 +2089,22 @@
                           "type": "integer"
                         }
                       }
+                    },
+                    "mux_encoding_seconds": {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "required": [
+                        "amount_per_packet",
+                        "price"
+                      ],
+                      "properties": {
+                        "amount_per_packet": {
+                          "type": "integer"
+                        },
+                        "price": {
+                          "type": "integer"
+                        }
+                      }
                     }
                   },
                   "example": {
@@ -2071,6 +2130,10 @@
                     },
                     "access_tokens": {
                       "amount_per_packet": 1,
+                      "price": 10
+                    },
+                    "mux_encoding_seconds": {
+                      "amount_per_packet": 1000,
                       "price": 10
                     }
                   }
@@ -2111,6 +2174,22 @@
                           "type": "integer"
                         }
                       }
+                    },
+                    "mux_streaming_seconds": {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "required": [
+                        "amount_per_packet",
+                        "price"
+                      ],
+                      "properties": {
+                        "amount_per_packet": {
+                          "type": "integer"
+                        },
+                        "price": {
+                          "type": "integer"
+                        }
+                      }
                     }
                   },
                   "example": {
@@ -2120,6 +2199,10 @@
                     },
                     "traffic_bytes": {
                       "amount_per_packet": 161061273600,
+                      "price": 29
+                    },
+                    "mux_streaming_seconds": {
+                      "amount_per_packet": 250000,
                       "price": 29
                     }
                   }
@@ -2423,6 +2506,12 @@
                                   "string"
                                 ]
                               },
+                              "cf_cod_fiscale": {
+                                "type": [
+                                  "null",
+                                  "string"
+                                ]
+                              },
                               "zip": {
                                 "type": "string"
                               }
@@ -2575,6 +2664,12 @@
                                 "type": "string"
                               },
                               "vat_number": {
+                                "type": [
+                                  "null",
+                                  "string"
+                                ]
+                              },
+                              "cf_cod_fiscale": {
                                 "type": [
                                   "null",
                                   "string"
@@ -2741,6 +2836,9 @@
                     },
                     "access_tokens": {
                       "type": "integer"
+                    },
+                    "mux_encoding_seconds": {
+                      "type": "integer"
                     }
                   },
                   "example": {
@@ -2749,7 +2847,8 @@
                     "item_types": 0,
                     "roles": 0,
                     "deployment_environments": 0,
-                    "access_tokens": 0
+                    "access_tokens": 0,
+                    "mux_encoding_seconds": 0
                   }
                 }
               }
@@ -3000,6 +3099,9 @@
                   "$ref": "#/definitions/subscription_compatibility/definitions/analysis"
                 },
                 "advanced_media_area_analysis": {
+                  "$ref": "#/definitions/subscription_compatibility/definitions/analysis"
+                },
+                "video": {
                   "$ref": "#/definitions/subscription_compatibility/definitions/analysis"
                 }
               }
@@ -3290,18 +3392,12 @@
       }
     },
     "rawHeaders": [
-      "Server",
-      "Cowboy",
-      "Date",
-      "Mon, 02 Dec 2019 11:25:46 GMT",
-      "Connection",
-      "close",
       "Last-Modified",
-      "Thu, 21 Nov 2019 16:16:48 GMT",
+      "Fri, 20 Mar 2020 10:30:39 GMT",
       "Content-Type",
       "application/json",
-      "X-Queue-Time",
-      "3ms",
+      "Content-Length",
+      "104079",
       "Access-Control-Allow-Credentials",
       "true",
       "Access-Control-Allow-Headers",
@@ -3314,11 +3410,14 @@
       "1728000",
       "Access-Control-Allow-Origin",
       "*",
-      "Content-Length",
-      "100533",
-      "Via",
-      "1.1 vegur"
-    ]
+      "Server",
+      "WEBrick/1.4.2 (Ruby/2.5.1/2018-03-29)",
+      "Date",
+      "Fri, 20 Mar 2020 11:00:38 GMT",
+      "Connection",
+      "close"
+    ],
+    "responseIsBinary": false
   },
   {
     "scope": "http://account-api.lvh.me:3001",
@@ -3328,7 +3427,7 @@
       "data": {
         "type": "account",
         "attributes": {
-          "email": "q2o7dv@example.com",
+          "email": "osfvsf@example.com",
           "company": "DatoCMS",
           "password": "STRONG_pass123!"
         }
@@ -3336,9 +3435,7 @@
     },
     "status": 201,
     "response": [
-      "1f8b0800bbf4e45d0003",
-      "7c8f5b4fc2401085ffcb3ef8c4c52256696214a9d46d2d182e21600c599745a66e2f766729d4f0df5d8886a889fb322733dfce39f341160c19713e082c8843c4d65fbd781cfae0d37149ad1ef8ad9a693668946e1e3a7eb6afe1686af53b05ccb6d4a6112dc2d11b86238aa1eb8f4db5c3686cf75caec3f2cd0acaf6a61fb50b9a9cd6265cb5322b009c759765b7b457eedaab6aff223a6bc6d53bab007b20668f85ecb229a910dc66c2245242294813d3c8856468a45a41a6f68919e7a94e702f7f1c6159f6f9e571c337b633af4220e1522f84e19efec72b8421e6f0a2511cdc44cc409af97b23bd58ac6fc486c59914359ec6065d42ae709eb0d86c48b4941522d9af860133966ccd069761da0987e65b96a76bd89f07c9ebbcb164739d830152cc98c69553afa391f52fdef9eb7cad04cf055eb903afd9f6eec7f7b7ae3b9879c179e08e68bbf3386c4e86c120989e80525ae457476750073fc611d626e292492576bbe7dd27000000ffff",
-      "03003c7c676910020000"
+      "1f8b080056a2745e00037c8f6d4fc2301485ff4b3ff889800c994a6274bc043b288bca7c99314b1d1ddca56c75bd0336c37fb7231aa326f64b4f4e9fde73ee3b5970e4a4f74e60417a4494eeea751c81072ef52bda9e817bde34a645936c371db8aabe67156bb3720b41496d9ad02d4b1c6443862ce9fb6c4e6d36746c562d8bd99c5693cad97989b3a5e971337863d6c863835b9cdcfb4ed8ef731fc2e4cc0d0285e38791279756ffa4ba562262a441b054c234d2426bc85263e442723452af40e9ba318fa2ac48b1963f96689f76ba9def095fd8de9c06813492c54218eef97fbc4138620eaf058a439a587390e63dd3f146c75762c7d74a8a6694ad0d1a43ae314cf9da4c480b291b44f25f8601154f4b3361c8311bb03bf34de5d906eaf5205d8656ccc322873a02152f70d56bb5d0c8d627dffb9b7ca945940bbc38a553df62279eedb2e0e6faa9db1d3d8e2774663fdedccf6fe9d43a02ad0b915f7c27833ee4f10861632ac65c6ab1dfbfec3f000000ffff03003e4eb22810020000"
     ],
     "rawHeaders": [
       "Content-Type",
@@ -3347,18 +3444,18 @@
       "Accept-Encoding",
       "Content-Encoding",
       "gzip",
-      "X-RateLimit-Limit",
-      "30",
-      "X-RateLimit-Remaining",
-      "28",
-      "ETag",
-      "W/\"afd1a378d15b844273cc396f89293de5\"",
+      "X-Ratelimit-Limit",
+      "60",
+      "X-Ratelimit-Remaining",
+      "58",
+      "Etag",
+      "W/\"24b865fa759c08dff1f870175e0ea9a7\"",
       "Cache-Control",
       "max-age=0, private, must-revalidate",
       "X-Request-Id",
-      "2643c5c5-a897-4409-b2f8-e87e069b3b78",
+      "10ac3372-243b-4b26-87b5-fa067e019e6d",
       "X-Runtime",
-      "0.249679",
+      "0.215141",
       "Access-Control-Allow-Credentials",
       "true",
       "Access-Control-Allow-Headers",
@@ -3371,14 +3468,19 @@
       "1728000",
       "Access-Control-Allow-Origin",
       "*",
+      "Server",
+      "WEBrick/1.4.2 (Ruby/2.5.1/2018-03-29)",
+      "Date",
+      "Fri, 20 Mar 2020 11:00:38 GMT",
+      "Content-Length",
+      "383",
       "Connection",
-      "close",
-      "Transfer-Encoding",
-      "chunked"
-    ]
+      "close"
+    ],
+    "responseIsBinary": false
   },
   {
-    "scope": "https://account-api.datocms.com:443",
+    "scope": "http://account-api.lvh.me:3001",
     "method": "GET",
     "path": "/docs/account-api-hyperschema.json",
     "body": "",
@@ -4317,6 +4419,12 @@
                                   "string"
                                 ]
                               },
+                              "cf_cod_fiscale": {
+                                "type": [
+                                  "null",
+                                  "string"
+                                ]
+                              },
                               "zip": {
                                 "type": "string"
                               }
@@ -4681,6 +4789,12 @@
                                   "string"
                                 ]
                               },
+                              "cf_cod_fiscale": {
+                                "type": [
+                                  "null",
+                                  "string"
+                                ]
+                              },
                               "zip": {
                                 "type": "string"
                               }
@@ -4794,6 +4908,12 @@
                                 "type": "string"
                               },
                               "vat_number": {
+                                "type": [
+                                  "null",
+                                  "string"
+                                ]
+                              },
+                              "cf_cod_fiscale": {
                                 "type": [
                                   "null",
                                   "string"
@@ -5031,6 +5151,9 @@
                     },
                     "access_tokens": {
                       "type": "integer"
+                    },
+                    "mux_encoding_seconds": {
+                      "type": "integer"
                     }
                   },
                   "example": {
@@ -5039,7 +5162,8 @@
                     "item_types": 0,
                     "roles": 0,
                     "deployment_environments": 0,
-                    "access_tokens": 0
+                    "access_tokens": 0,
+                    "mux_encoding_seconds": 0
                   }
                 }
               }
@@ -5259,6 +5383,22 @@
                   "description": "The number of requests made to both our Content Management and Content Delivery APIs",
                   "example": 100000
                 },
+                "mux_streaming_seconds": {
+                  "type": [
+                    "null",
+                    "integer"
+                  ],
+                  "description": "The number of streaming seconds delivered by Mux.com",
+                  "example": 3600
+                },
+                "mux_encoding_seconds": {
+                  "type": [
+                    "null",
+                    "integer"
+                  ],
+                  "description": "The number of available encoding seconds to Mux.com",
+                  "example": 3600
+                },
                 "access_tokens": {
                   "type": [
                     "null",
@@ -5296,14 +5436,19 @@
                   "description": "Whether collaboration features are enabled or not",
                   "example": true
                 },
-                "advanced_media_area": {
-                  "type": "boolean",
-                  "description": "Whether built-in image editor is enabled or not",
-                  "example": true
-                },
                 "sso": {
                   "type": "boolean",
                   "description": "Whether Single Sign-On feature is enabled or not",
+                  "example": true
+                },
+                "advanced_media_area": {
+                  "type": "boolean",
+                  "description": "Whether built-in image editor and smart-tagging is enabled or not",
+                  "example": true
+                },
+                "video": {
+                  "type": "boolean",
+                  "description": "Whether video streaming with Mux.com is enabled or not",
                   "example": true
                 },
                 "history_retention_months": {
@@ -5424,6 +5569,22 @@
                           "type": "integer"
                         }
                       }
+                    },
+                    "mux_encoding_seconds": {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "required": [
+                        "amount_per_packet",
+                        "price"
+                      ],
+                      "properties": {
+                        "amount_per_packet": {
+                          "type": "integer"
+                        },
+                        "price": {
+                          "type": "integer"
+                        }
+                      }
                     }
                   },
                   "example": {
@@ -5449,6 +5610,10 @@
                     },
                     "access_tokens": {
                       "amount_per_packet": 1,
+                      "price": 10
+                    },
+                    "mux_encoding_seconds": {
+                      "amount_per_packet": 1000,
                       "price": 10
                     }
                   }
@@ -5489,6 +5654,22 @@
                           "type": "integer"
                         }
                       }
+                    },
+                    "mux_streaming_seconds": {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "required": [
+                        "amount_per_packet",
+                        "price"
+                      ],
+                      "properties": {
+                        "amount_per_packet": {
+                          "type": "integer"
+                        },
+                        "price": {
+                          "type": "integer"
+                        }
+                      }
                     }
                   },
                   "example": {
@@ -5498,6 +5679,10 @@
                     },
                     "traffic_bytes": {
                       "amount_per_packet": 161061273600,
+                      "price": 29
+                    },
+                    "mux_streaming_seconds": {
+                      "amount_per_packet": 250000,
                       "price": 29
                     }
                   }
@@ -5801,6 +5986,12 @@
                                   "string"
                                 ]
                               },
+                              "cf_cod_fiscale": {
+                                "type": [
+                                  "null",
+                                  "string"
+                                ]
+                              },
                               "zip": {
                                 "type": "string"
                               }
@@ -5953,6 +6144,12 @@
                                 "type": "string"
                               },
                               "vat_number": {
+                                "type": [
+                                  "null",
+                                  "string"
+                                ]
+                              },
+                              "cf_cod_fiscale": {
                                 "type": [
                                   "null",
                                   "string"
@@ -6119,6 +6316,9 @@
                     },
                     "access_tokens": {
                       "type": "integer"
+                    },
+                    "mux_encoding_seconds": {
+                      "type": "integer"
                     }
                   },
                   "example": {
@@ -6127,7 +6327,8 @@
                     "item_types": 0,
                     "roles": 0,
                     "deployment_environments": 0,
-                    "access_tokens": 0
+                    "access_tokens": 0,
+                    "mux_encoding_seconds": 0
                   }
                 }
               }
@@ -6378,6 +6579,9 @@
                   "$ref": "#/definitions/subscription_compatibility/definitions/analysis"
                 },
                 "advanced_media_area_analysis": {
+                  "$ref": "#/definitions/subscription_compatibility/definitions/analysis"
+                },
+                "video": {
                   "$ref": "#/definitions/subscription_compatibility/definitions/analysis"
                 }
               }
@@ -6668,18 +6872,12 @@
       }
     },
     "rawHeaders": [
-      "Server",
-      "Cowboy",
-      "Date",
-      "Mon, 02 Dec 2019 11:25:47 GMT",
-      "Connection",
-      "close",
       "Last-Modified",
-      "Thu, 21 Nov 2019 16:16:48 GMT",
+      "Fri, 20 Mar 2020 10:30:39 GMT",
       "Content-Type",
       "application/json",
-      "X-Queue-Time",
-      "419ms",
+      "Content-Length",
+      "104079",
       "Access-Control-Allow-Credentials",
       "true",
       "Access-Control-Allow-Headers",
@@ -6692,11 +6890,14 @@
       "1728000",
       "Access-Control-Allow-Origin",
       "*",
-      "Content-Length",
-      "100533",
-      "Via",
-      "1.1 vegur"
-    ]
+      "Server",
+      "WEBrick/1.4.2 (Ruby/2.5.1/2018-03-29)",
+      "Date",
+      "Fri, 20 Mar 2020 11:00:38 GMT",
+      "Connection",
+      "close"
+    ],
+    "responseIsBinary": false
   },
   {
     "scope": "http://account-api.lvh.me:3001",
@@ -6712,9 +6913,7 @@
     },
     "status": 201,
     "response": [
-      "1f8b0800bcf4e45d0003",
-      "7452cb769b3010fd17ad6d8e100f1b7669dcb4b8863889bd68369c41082c07848b4431cef1bf5772ebd8695a58e868ee63e0cebca21c14a0f015f11c85c89e38be8746480d3ba6af922ba66fa054cbb34e316988026a837daa9a52637953031728145d558d10178ab502aa5476d9194199668e7d3bc09a5e8154a96999d20d8892a5a03483603b18db648cc9cab643e285eed4f21dfcac05a239b5fd6d0f94322953d5bc3063cc86f926fb42f93d9f47eb4364277c1e58ba48a26db35fdcce0fe64c0e31499e7a0e4f911faf3e936455ca483c18d126e23d7f1e223fda467dbc7a51f12a52f16cbed6a71f6fd77e322bbb641b1fbe1d6ef6f7db9b3e12d8aa6552ddfea8f719bb4b6049edc7fd3258ccba059bde0d429225c18fd3befcaa1ed8777415c8c7342cc86b2e2c1d46436b69d1a6d67cda32502cff7f2c5e404c2c9a96f7ad1ecf5b18184f6831c179504c7c6f4a3d272b7297d9d471fd9c797f248da8863705189a9bbb40fc2200d70d1cdf757342a71966456666cb802afed37c100a0ba8243b1a9b0a146f84dcf0dd691f4e1c66262e69cb770633e5f77b1510075fedd535f7781c9d3d7615fc437bd19d70c3ef2494ec23738cdfbd7f6ff355d754c7bdd3ff91f18aabe1e4a95a10b260edc5d62c9d069a5e5c57cfcd6c1df3c55caf66d309a59df4f30b0000ffff",
-      "0300e0e93e4f56030000"
+      "1f8b080056a2745e000374525d73a23014fd2f3c0b9380c4e29bd58e83bbe876561fda17e692440d8b8125a1081dff7b1377b5769d850726f77c5c72ee7d77186870c6ef8e60ced8f187c3103903477715374725343727d0ba1659a3b9b24409078b3d16e5ce60ac3c8090ce583645317084d4bc9650a4aac92e889319a61b453e36f402944e6dcb94ee41ee780adab6453e7251e0fa688df118a171f0e011845f8d4096e7b67fec8152ae54aacb5fdc1af36eb1cfe654acc422def4315e8a45e499a21fe7e5f1fb74d19b6fb79c3de364da0af81993644dfbe53a51b17cb6a27d2c5af1dac524cee336c9273a99253ac91f37c9da70671392f4bb66994ffa6ffde4b8ca276d2c91a77e87c398a4d344cc874f59b49abb194ae6cbe8c7d3cba65ad5c7d502d0dbe66556b8369e6b20f76978c00e427a268c921e9447cb83e1d39a83e6ecffb1842362633134d6d6663cd730080196859c8d5848894f234221c2bead7036247f25a52cbaab828dc8438609f511603fda321ae220842df7231a706a67cb816af1667fc8196fa150fc646d0ad0a2946a2faaf33e9c39dc4e5cd15a5416b3e5af7b35c26170b357b7dcd36970f1a80ab8d7e24fdd19b7fc46c18edf335df4e5fd779b6fbaa626eecadc231385d0ddd953d720d596d79fb676e90c50b6f2b67a69360a6eaf6456b36ca4364ee6f9000000ffff030080beaa9e56030000"
     ],
     "rawHeaders": [
       "Content-Type",
@@ -6723,18 +6922,18 @@
       "Accept-Encoding",
       "Content-Encoding",
       "gzip",
-      "X-RateLimit-Limit",
-      "30",
-      "X-RateLimit-Remaining",
-      "29",
-      "ETag",
-      "W/\"fe930e7e8f1ef29b6e89836c103ee1cc\"",
+      "X-Ratelimit-Limit",
+      "60",
+      "X-Ratelimit-Remaining",
+      "56",
+      "Etag",
+      "W/\"6654e3822e99b30248ab1a9d84e8436e\"",
       "Cache-Control",
       "max-age=0, private, must-revalidate",
       "X-Request-Id",
-      "57047994-3181-44ec-ba15-b71dc94cbf58",
+      "c983ccdb-347e-426c-afdd-a7d40e433e5c",
       "X-Runtime",
-      "0.079871",
+      "0.056739",
       "Access-Control-Allow-Credentials",
       "true",
       "Access-Control-Allow-Headers",
@@ -6747,10 +6946,15 @@
       "1728000",
       "Access-Control-Allow-Origin",
       "*",
+      "Server",
+      "WEBrick/1.4.2 (Ruby/2.5.1/2018-03-29)",
+      "Date",
+      "Fri, 20 Mar 2020 11:00:38 GMT",
+      "Content-Length",
+      "513",
       "Connection",
-      "close",
-      "Transfer-Encoding",
-      "chunked"
-    ]
+      "close"
+    ],
+    "responseIsBinary": false
   }
 ]

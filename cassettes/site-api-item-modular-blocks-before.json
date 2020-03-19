@@ -1,6 +1,6 @@
 [
   {
-    "scope": "https://account-api.datocms.com:443",
+    "scope": "http://account-api.lvh.me:3001",
     "method": "GET",
     "path": "/docs/account-api-hyperschema.json",
     "body": "",
@@ -3392,18 +3392,12 @@
       }
     },
     "rawHeaders": [
-      "Server",
-      "Cowboy",
-      "Date",
-      "Wed, 18 Dec 2019 10:50:29 GMT",
-      "Connection",
-      "close",
       "Last-Modified",
-      "Tue, 17 Dec 2019 11:32:51 GMT",
+      "Fri, 20 Mar 2020 10:30:39 GMT",
       "Content-Type",
       "application/json",
-      "X-Queue-Time",
-      "4ms",
+      "Content-Length",
+      "104079",
       "Access-Control-Allow-Credentials",
       "true",
       "Access-Control-Allow-Headers",
@@ -3416,10 +3410,12 @@
       "1728000",
       "Access-Control-Allow-Origin",
       "*",
-      "Content-Length",
-      "104079",
-      "Via",
-      "1.1 vegur"
+      "Server",
+      "WEBrick/1.4.2 (Ruby/2.5.1/2018-03-29)",
+      "Date",
+      "Fri, 20 Mar 2020 10:51:21 GMT",
+      "Connection",
+      "close"
     ],
     "responseIsBinary": false
   },
@@ -3431,7 +3427,7 @@
       "data": {
         "type": "account",
         "attributes": {
-          "email": "sgjl4a@example.com",
+          "email": "odx6nr@example.com",
           "company": "DatoCMS",
           "password": "STRONG_pass123!"
         }
@@ -3439,9 +3435,7 @@
     },
     "status": 201,
     "response": [
-      "1f8b08007904fa5d0003",
-      "7c8f514fc2301485ff4b1f7c2220031725310a43a5d342942d2ac690cb28eeceb22e6bcbd808ffdd8e688c9ad8a4e9c9cdd773cedd91256820bd1dc125e9115efaf1e226c209fa34ac687b8cfe59d30e1d9ac8ed9de767f5cbaaab2ef30a9c95d4a5092d58f0ae5940ed8d43165cb9e3a0efb28a19367c6edf56fded24e917343d6e6e507be17bc767836512df04f942d1cabd2da419cb55d77bca1e1fa7a5d9969d0242d220baccb86da4b85228533bc8b9006da58a31537563882269525dcb1f4bb43bedd3e36f872f6c6f4f83601a09b3e4967bf91f6f10d03ac785d1fc90c6d780a22ef496882e5cf22dac33c19b915c5b7485b9d2f314d6d62135423488805f030b669096d661085a7a6c6abf65b9dc60bd1ea66f7367057393a305a4cec0e8b8d76a692b5b9f7cef6ff285e251cef5b9c346c168fa40ef479ee73c5f9f8c1c37980ddc69783f9b8c87c3c1112a65787efe9d8cea900791c68dadb802a1f87effbaff000000ffff",
-      "030044eb2fe210020000"
+      "1f8b080029a0745e00037c4f6b4fc23014fd2ffde02702cacc5012a208289deb5079c4470c29a3b83bbb6eaeb78e61f8ef7644e32bb149d393d373cf39f78d2c3972d27e23b0246d224a2f5a5c8430028f4e37f42000efb86ec9268dd3b5dff3b2ea0d366c3fe815705f5297c6b4607117599f218bcfa66c3270037b593c30c166ea5c6ebaeb51dc2da8daaf47c18b6f56cfe8b48ad2c447ddc1549aa299240bbd709c73effc26ba2a2f27cf011d1f921ac13213b691165a43aa2c910bc9d1421d41a6abc63c0c53a3b0823f9638683987df1c3e655b7b6a045428cd5258ddc3fff21ae188392c0c8a5d9a483848fb9f2ed7aeca4fc59a279914f5304dac7405b9c6b9e289755046ca1a91fc1761851957a575e8734c7b6c6cc7b23c7d856a3d504ff3e68acf4d0e550466dc60d46e34d0c2c687befd37f9448b3017d8f1bc56fffa767831623e73fde1eca6493df76e321abbc3963fbb72f7406b23f2ce5732e85d1e0f115e6dc515975a6cb78fdb77000000ffff03007e0dc22710020000"
     ],
     "rawHeaders": [
       "Content-Type",
@@ -3450,18 +3444,18 @@
       "Accept-Encoding",
       "Content-Encoding",
       "gzip",
-      "X-RateLimit-Limit",
-      "30",
-      "X-RateLimit-Remaining",
-      "29",
-      "ETag",
-      "W/\"8e1d8230b424dde9fcc5fe48b6060971\"",
+      "X-Ratelimit-Limit",
+      "60",
+      "X-Ratelimit-Remaining",
+      "58",
+      "Etag",
+      "W/\"e28d52d3b6020c43d37588b4d1729260\"",
       "Cache-Control",
       "max-age=0, private, must-revalidate",
       "X-Request-Id",
-      "4b3aac94-c162-4c90-a1d6-b732954b4336",
+      "e3053417-58f2-42f6-b460-12c469df67e7",
       "X-Runtime",
-      "0.253062",
+      "0.237978",
       "Access-Control-Allow-Credentials",
       "true",
       "Access-Control-Allow-Headers",
@@ -3474,15 +3468,19 @@
       "1728000",
       "Access-Control-Allow-Origin",
       "*",
+      "Server",
+      "WEBrick/1.4.2 (Ruby/2.5.1/2018-03-29)",
+      "Date",
+      "Fri, 20 Mar 2020 10:51:21 GMT",
+      "Content-Length",
+      "383",
       "Connection",
-      "close",
-      "Transfer-Encoding",
-      "chunked"
+      "close"
     ],
     "responseIsBinary": false
   },
   {
-    "scope": "https://account-api.datocms.com:443",
+    "scope": "http://account-api.lvh.me:3001",
     "method": "GET",
     "path": "/docs/account-api-hyperschema.json",
     "body": "",
@@ -6874,18 +6872,12 @@
       }
     },
     "rawHeaders": [
-      "Server",
-      "Cowboy",
-      "Date",
-      "Wed, 18 Dec 2019 10:50:32 GMT",
-      "Connection",
-      "close",
       "Last-Modified",
-      "Tue, 17 Dec 2019 11:32:51 GMT",
+      "Fri, 20 Mar 2020 10:30:39 GMT",
       "Content-Type",
       "application/json",
-      "X-Queue-Time",
-      "5ms",
+      "Content-Length",
+      "104079",
       "Access-Control-Allow-Credentials",
       "true",
       "Access-Control-Allow-Headers",
@@ -6898,10 +6890,12 @@
       "1728000",
       "Access-Control-Allow-Origin",
       "*",
-      "Content-Length",
-      "104079",
-      "Via",
-      "1.1 vegur"
+      "Server",
+      "WEBrick/1.4.2 (Ruby/2.5.1/2018-03-29)",
+      "Date",
+      "Fri, 20 Mar 2020 10:51:21 GMT",
+      "Connection",
+      "close"
     ],
     "responseIsBinary": false
   },
@@ -6919,9 +6913,7 @@
     },
     "status": 201,
     "response": [
-      "1f8b08007c04fa5d0003",
-      "7c525d8f9a4014fd2f3c2b9941f9f2cd5ad38c15cdb6b8ddec0bb90c838ec24098615136fef7ced8baba35298490b9f79c73e1dcf36e65a0c09abc5b3cb326160e7130b606963ad54c1f25574c9f40a986a7ad62d2000594a6f7a5a8b6ba97552570614d445b14038b0bc51a014522dbf4dab1528d1c8ec2106b780152256664427720b62c01a5110ec2e1103b431cc4184d5c3419b976188c5e35415497b17fe481522665a2aa0333c2ecb4d8a5df285ff305d9f404aff822b475d121fbeab89c2d7af35ec7f3f16ad671f849bc288e8eebaf5349c49321ed08eff8eb8978644fba283ea82826fad96da278eeade2a917f59b761d6fc7dffbe971bd9f7644205b65edafe5f3d3cc970792aa95f3b679eefaa8cbcafc65d6bffca8e7a94f13da1cd5b2b2ee0c7974c386ace4c2d66654b49436ad4a8da70d03c5b2ffd88290b145c3b2aed1ebf930c3f7c1cb02e483e36217b1600c340db270ec7abeefc05f4a258ad30763e422703cc70d5c1c6401ce433f702175bc3cc89c1c99dd32a08abf990fb2263914929d8d4c018a5742ee787dc9c305c3ccc6256d786d7aa6fc29570e767cef2e57f7d8f37970d5a80b78e4e21befd237f856c2963d2287e8d3fd6f9aefa626daee5aff47ca0bae4e174dd58090396b6eb22674ba5175e2be7a1d36c201ba89eb6856ad505a495fbf010000ffff",
-      "03004221450756030000"
+      "1f8b080029a0745e00037c525d73a23014fd2f7956267c236f5adb2eb6e0b4da97be3021440d42424910b1e37fdfc45db7b4ce2c0c93b9f79e7b2e39f77c821c4904c24f40731002cb711c138c80ec6ba2424125511192b2a1592b89d040862a5d9b957cab6a39af106520646d598e006592340c95a968b36b05640a39f63ddb55f0120999ea9129de21b62529927a2cb4e018da630bae4d18ba6668994660fbefaa81f1cbd83ff4086322442af99e6862d22f76d923a64bba88de4e9199d0c5c450492b2af8f1f96e7152679fcc5f60bcea285a455ebcc627158b88bde8a65d443bfade475e54445d5c4c653c8f655cccdee2f5bd97a82f2eeedbe53c769f4ed3e3b298761183c604da8fafcf87e313e1c161cfbdae4dfd72f5313b04242f96ebea21a9f71fdec3af24c16020c8ad1a06ca2bca0c2506c7953030af141e37044992ff4716d3d4b22858de356a3d5f626c3cd78493dc0adc0d82b935b18887331fc3cc0a72f2b785b3b2ffd7811d92999e6f39109b81ed4c1cc7b25d8cbc20c30edae8dd1284253de81f02e10695829c354d8924e54cec687df1c30543f4c6056e68ad6b3afddd57bee938035f0db1e7f3e8ca5197e8b677e0c74b5de35b81b6e4163986dfde9f6e1e4c4d95dcb5ba47464b2afb0ba76c10131bd27cd16ad3a902efd8307b1de6dbc32b296bf29649c5a49edf000000ffff03001444c28056030000"
     ],
     "rawHeaders": [
       "Content-Type",
@@ -6930,18 +6922,18 @@
       "Accept-Encoding",
       "Content-Encoding",
       "gzip",
-      "X-RateLimit-Limit",
-      "30",
-      "X-RateLimit-Remaining",
-      "29",
-      "ETag",
-      "W/\"74230e74977148d0fb417e527aebb45f\"",
+      "X-Ratelimit-Limit",
+      "60",
+      "X-Ratelimit-Remaining",
+      "56",
+      "Etag",
+      "W/\"f7b162b7ddbb4321c1facc78035f7733\"",
       "Cache-Control",
       "max-age=0, private, must-revalidate",
       "X-Request-Id",
-      "1491a0ac-7926-471c-a910-e3a1b19c6f97",
+      "d01e2939-d416-4caf-9573-33dcce2fe3c8",
       "X-Runtime",
-      "0.387163",
+      "0.059055",
       "Access-Control-Allow-Credentials",
       "true",
       "Access-Control-Allow-Headers",
@@ -6954,10 +6946,14 @@
       "1728000",
       "Access-Control-Allow-Origin",
       "*",
+      "Server",
+      "WEBrick/1.4.2 (Ruby/2.5.1/2018-03-29)",
+      "Date",
+      "Fri, 20 Mar 2020 10:51:21 GMT",
+      "Content-Length",
+      "514",
       "Connection",
-      "close",
-      "Transfer-Encoding",
-      "chunked"
+      "close"
     ],
     "responseIsBinary": false
   }
